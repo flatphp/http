@@ -1,0 +1,21 @@
+{
+    "name": "flatphp/http",
+    "description": "Http Lib",
+    "keywords": ["http"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Fred Yang",
+            "email": "shuky2000@163.com"
+        }
+    ],
+    "require": {
+	"php": ">=5.5"
+    },
+    "autoload": {
+        "psr-4": {
+            "Flatphp\\Http\\": ""
+        }
+    },
+    "minimum-stability": "dev"
+}
