@@ -21,14 +21,14 @@ class LoginInput extends Input
 {
     protected function _sanitize()
     {
-	return array(
+        return array(
 	    'username' => trim($this->raw('username'))
 	);
     }
 
     protected function _validate(&$message = '')
     {
-	if (empty($this->raw('username')) || empty($this->raw('password'))) {
+        if (empty($this->raw('username')) || empty($this->raw('password'))) {
 	    $message = 'please input username and password';
 	    return false;
 	}

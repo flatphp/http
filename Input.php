@@ -67,7 +67,7 @@ abstract class Input
      */
     public function all()
     {
-        return $this->_sanitized;
+        return array_merge($this->_input, $this->_sanitized);
     }
 
     /**
@@ -77,6 +77,6 @@ abstract class Input
      */
     public function __get($key)
     {
-        return isset($this->_sanitized[$key]) ? $this->_sanitized[$key] : null;
+        return isset($this->_sanitized[$key]) ? $this->_sanitized[$key] : $this->raw($key);
     }
 }
